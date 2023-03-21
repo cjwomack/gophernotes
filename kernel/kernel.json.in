@@ -3,7 +3,7 @@
         "gophernotes",
         "{connection_file}"
     ],
-    "display_name": "Go",
+    "display_name": "Go_CJW",
     "language": "go",
     "name": "go"
 }
