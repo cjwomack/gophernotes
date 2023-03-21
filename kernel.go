@@ -672,13 +672,19 @@ func startHeartbeat(hbSocket Socket, wg *sync.WaitGroup) (shutdown chan struct{}
 func evalSpecialCommands(ir *interp.Interp, outerr OutErr, code string) string {
 	lines := strings.Split(code, "\n")
 	stop := false
+	
 	for i, line := range lines {
 		line = strings.TrimSpace(line)
 		if len(line) != 0 {
 			switch line[0] {
 			case '%':
-				evalSpecialCommand(ir, outerr, line)
-				lines[i] = ""
+				if strings.HasPrefix(line, "%%for_gonb")
+					lines[i] = ""
+				}
+				else {
+					evalSpecialCommand(ir, outerr, line)
+					lines[i] = ""
+				}
 			case '$':
 				evalShellCommand(ir, outerr, line)
 				lines[i] = ""
