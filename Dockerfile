@@ -2,7 +2,7 @@ FROM alpine:3.15
 MAINTAINER dwhitena
 
 # Add gophernotes
-ADD . /go/src/github.com/gopherdata/gophernotes/
+ADD . /go/src/github.com/cjwomack/gophernotes/
 
 # Install Jupyter and gophernotes.
 RUN set -x \
