@@ -26,7 +26,7 @@ import (
 	"github.com/cosmos72/gomacro/xreflect"
 
 	// compile and link files generated in imports/
-	_ "github.com/gopherdata/gophernotes/imports"
+	_ "github.com/cjwomack/gophernotes/imports"
 )
 
 // ExecCounter is incremented each time we run user code in the notebook.
